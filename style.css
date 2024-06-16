@@ -1,0 +1,176 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: #edb035;
+  color: white;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .logo {
+  font-size: 1.5em;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 1em;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff0000;
+}
+
+section {
+  padding: 2em;
+  text-align: center;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 0;
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+}
+
+.home-image {
+  width: 40%;
+  height: auto;
+  margin-right: 2em;
+}
+
+.home-description {
+  width: 50%;
+  text-align: left;
+}
+
+.burger-menu, .burger-discount {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.burger-item {
+  border: 1px solid #ddd;
+  margin: 1em;
+  padding: 1em;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.burger-item img {
+  width: 100%;
+  height: auto;
+}
+
+.burger-item button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.burger-item button:hover {
+  background-color: #ff9800;
+}
+
+.burger-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  nav ul li {
+      margin: 0.5em 0;
+  }
+
+  .home-content {
+      flex-direction: column;
+  }
+
+  .home-image, .home-description {
+      width: 80%;
+      margin: 1em 0;
+  }
+
+  .home-image {
+      margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  nav ul {
+      width: 100%;
+      padding: 0;
+  }
+
+  nav ul li {
+      margin: 0.5em 0;
+      width: 100%;
+      text-align: left;
+  }
+
+  nav ul li a {
+      display: block;
+      padding: 0.5em;
+  }
+
+  .home-content {
+      flex-direction: column;
+      margin-top: auto;
+      margin-bottom: auto;
+  }
+
+  .home-image, .home-description {
+      width: 100%;
+      margin: 1em 0;
+  }
+
+  .home-image {
+      margin-right: 0;
+  }
+
+  .burger-item {
+      width: 100%;
+      margin: 1em 0;
+  }
+}
